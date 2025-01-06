@@ -40,6 +40,10 @@ const HomeScreen = () => {
           })
         }
       />
+      <Button
+        title={'Go to SheetScreen'}
+        onPress={() => navigation.navigate('Sheet')}
+      />
     </View>
   );
 };
