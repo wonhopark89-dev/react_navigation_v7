@@ -2,14 +2,27 @@
  * created by : wonhopark89@gmail.com
  * created at : 2025/01/07 00:13:49
  */
-import {View, Text} from 'react-native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import HomeScreen from './HomeScreen.tsx';
+import ATabScreen from './ATabScreen.tsx';
 
-const RootScreen = () => {
+const Stack = createNativeStackNavigator();
+
+function RootStackScreen() {
   return (
-    <View>
-      <Text>RootScreen</Text>
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{headerShown: true}}
+      />
+      <Stack.Screen
+        name={'ATab'}
+        component={ATabScreen}
+        options={{headerShown: true}}
+      />
+    </Stack.Navigator>
   );
-};
+}
 
-export default RootScreen;
+export default RootStackScreen;
