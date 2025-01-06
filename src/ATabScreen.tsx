@@ -7,13 +7,25 @@ import A1TabScreen from './tabs/A1TabScreen.tsx';
 import A2TabScreen from './tabs/A2TabScreen.tsx';
 import A3TabScreen from './tabs/A3TabScreen.tsx';
 import A4TabScreen from './tabs/A4TabScreen.tsx';
-import {Easing} from 'react-native';
+import {Easing, View, Text} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
 function ATabScreen() {
   return (
     <Tab.Navigator
+      // layout={({children, state, descriptors, navigation}) => {
+      //   const isA4 = state.routeNames[state.index] === 'A4Tab';
+      //   return (
+      //     <View style={{flex: 1}}>
+      //       <View style={{height: 20, backgroundColor: 'cyan'}}>
+      //         <Text>{'공통'}</Text>
+      //       </View>
+      //       {isA4 && <Text>{'A4 일때만 나타남'}</Text>}
+      //       {children}
+      //     </View>
+      //   );
+      // }}
       screenOptions={{
         animation: 'fade',
         headerShown: false,
