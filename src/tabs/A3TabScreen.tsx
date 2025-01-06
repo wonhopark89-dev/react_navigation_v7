@@ -3,8 +3,12 @@
  * created at : 2025/01/07 00:33:50
  */
 import {View, Text} from 'react-native';
+import {useEffect} from 'react';
 
 const A3TabScreen = () => {
+  useEffect(() => {
+    console.log('--- useEffect ---- A3TabScreen');
+  }, []);
   return (
     <View
       style={{
