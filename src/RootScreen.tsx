@@ -5,8 +5,19 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from './HomeScreen.tsx';
 import ATabScreen from './ATabScreen.tsx';
+import EtcScreen from './EtcScreen.tsx';
 
-const Stack = createNativeStackNavigator();
+type RootStackParamList = {
+  Home: undefined;
+  ATab: undefined;
+  Etc: {
+    name: string;
+    age: number;
+    info: object;
+  };
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function RootStackScreen() {
   return (
@@ -21,6 +32,7 @@ function RootStackScreen() {
         component={ATabScreen}
         options={{headerShown: true}}
       />
+      <Stack.Screen name={'Etc'} component={EtcScreen} />
     </Stack.Navigator>
   );
 }

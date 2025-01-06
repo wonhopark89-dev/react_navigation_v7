@@ -29,6 +29,7 @@ function ATabScreen() {
       screenOptions={{
         animation: 'fade',
         headerShown: false,
+        tabBarPosition: 'bottom', // right, left
       }}>
       <Tab.Screen name="A1Tab" component={A1TabScreen} />
       <Tab.Screen name="A2Tab" component={A2TabScreen} />
@@ -49,7 +50,7 @@ function ATabScreen() {
             animation: 'timing',
             config: {
               duration: 2000,
-              easing: Easing.inOut(Easing.ease),
+              easing: Easing.in(Easing.ease),
             },
           },
         }}

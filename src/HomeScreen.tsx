@@ -20,6 +20,16 @@ const HomeScreen = () => {
         title={'Go to A1TabScreen'}
         onPress={() => navigation.navigate('ATab')}
       />
+      <Button
+        title={'Go to EtcScreen'}
+        onPress={() =>
+          navigation.navigate('Etc', {
+            name: 'theus',
+            age: 11,
+            info: {message: 'hello', data: 1234},
+          })
+        }
+      />
     </View>
   );
 };

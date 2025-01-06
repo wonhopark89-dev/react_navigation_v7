@@ -11,7 +11,7 @@ const A4TabScreen = () => {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'white',
+        backgroundColor: '#B6E3E9',
       }}>
       <Text>A4TabScreen</Text>
     </View>
