@@ -30,6 +30,16 @@ const HomeScreen = () => {
           })
         }
       />
+      <Button
+        title={'Preload EtcScreen'}
+        onPress={() =>
+          navigation.preload('Etc', {
+            name: '엘언니',
+            age: 30,
+            info: {message: 'goodbye', data: 5678},
+          })
+        }
+      />
     </View>
   );
 };
